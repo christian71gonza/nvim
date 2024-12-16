@@ -1,4 +1,3 @@
-vim.o.winbar = "%{%v:lua.require'plugins.winbar'.eval()%}"
 require 'core.utils.theme' -- Custom colorscheme
 require 'core.options' -- Load general options
 require 'core.keymaps' -- Load general keymaps

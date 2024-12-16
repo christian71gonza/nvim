@@ -116,7 +116,6 @@ return {
     pcall(require('telescope').load_extension, 'cmdline')
 
     vim.keymap.set("n", "fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
-    vim.api.nvim_set_keymap('n', 'p', ':Telescope cmdline<CR>', { noremap = true, desc = "Cmdline" })
     
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'

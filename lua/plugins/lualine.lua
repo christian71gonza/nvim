@@ -2,7 +2,7 @@ return {
   'nvim-lualine/lualine.nvim',
   config = function()
 
-    local U = require("core.utils.neovim")
+    local U = require("core.utils")
 
     -- Custom mode names.
     -- I want all of them to be the same length so that lualine stays constant.
@@ -125,49 +125,42 @@ return {
                     separator = { right = " ", left = "" },
                 },
             },
-            lualine_c = {
-                {
-                    function() return is_recording() and "●" or "" end,
-                    color = get_recording_color,
-                    padding = 0,
-                    separator = "",
-                },
-                {
-                    "branch",
-                    color = text_hl,
-                    icon = { " ", color = icon_hl },
-                    separator = "",
-                    padding = 0,
-                },
-                {
-                    "diff",
-                    color = text_hl,
-                    icon = { "  ", color = text_hl },
-                    source = diff_source,
-                    symbols = {
-                        added = "+ ",
-                        modified = "~ ",
-                        removed = " ",
-                    },
-                    diff_color = {
-                        added = icon_hl,
-                        modified = icon_hl,
-                        removed = icon_hl,
-                    },
-                    padding = 0,
-                },
+        lualine_b = {},
+        lualine_c = {
+            {
+                U.get_recording_state_icon,
+                color = get_recording_color,
+                padding = 0,
+                separator = "",
             },
-            lualine_x = {
-                {
-                    "diagnostics",
-                    sources = { "nvim_diagnostic" },
-                    symbols = diagnostic_signs,
-                    colored = true,
-                    padding = 2,
-                },
+            {
+                "branch",
+                color = text_hl,
+                icon = { " ", color = icon_hl },
+                separator = "",
+                padding = 0,
             },
-            lualine_z = default_z,
+            {
+                "diff",
+                color = text_hl,
+                icon = { "  ", color = text_hl },
+                source = diff_source,
+                symbols = {
+                    added = "+ ",
+                    modified = "~ ",
+                    removed = "- ",
+                },
+                diff_color = {
+                    added = icon_hl,
+                    modified = icon_hl,
+                    removed = icon_hl,
+                },
+                padding = 0,
+            },
         },
+        lualine_y = {},
+        lualine_z = default_z,
+    },
         options = {
             disabled_filetypes = { "dashboard" },
             globalstatus = true,
@@ -190,7 +183,5 @@ return {
 
     -- Load default theme configuration if applicable.
     if U.is_default() then require("core.utils.theme").setup_lualine() end
-    -- Remove tabline
-    vim.opt.showtabline = 0
   end
 }
