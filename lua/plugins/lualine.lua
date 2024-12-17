@@ -116,6 +116,9 @@ return {
         filetypes = { "TelescopePrompt" },
     }
     require("lualine").setup({
+        options = {
+            icons_enabled = false,
+        },
         sections = {
             lualine_a = {
                 {
@@ -158,6 +161,7 @@ return {
                 padding = 0,
             },
         },
+        lualine_x = {},
         lualine_y = {},
         lualine_z = default_z,
     },

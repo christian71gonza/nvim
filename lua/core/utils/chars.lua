@@ -82,7 +82,7 @@ M.kind_icons = {
     TabNine = "󰚩 ",
     Copilot = " ",
     Unknown = " ",
-    Recording = " ",
+    Recording = "rec ",
     None = "  ",
 }
 

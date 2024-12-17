@@ -2,6 +2,7 @@ require 'core.utils.theme' -- Custom colorscheme
 require 'core.winbar' -- Custom colorscheme
 require 'core.options' -- Load general options
 require 'core.keymaps' -- Load general keymaps
+require 'core.keys'
 require 'core.snippets' -- Custom code snippets
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'

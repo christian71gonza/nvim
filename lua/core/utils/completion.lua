@@ -65,4 +65,5 @@ local search = {
 }
 CMP.setup.cmdline({ "/", "?" }, search)
 
+require("core.keys").completion()
 

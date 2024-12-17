@@ -38,9 +38,9 @@ function M.get_winbar()
     local prefix = "  "
     local mod_icon = ""
     if U.current_buffer_modified() then
-        mod_icon = " ●"
+        mod_icon = " [*]"
     elseif not U.current_buffer_modifiable() then
-        mod_icon = " "
+        mod_icon = " [#]"
     end
 
     local filetype = U.current_buffer_filetype()
@@ -58,7 +58,7 @@ function M.get_winbar()
     local filename = U.current_buffer_filename()
     if filename == "" then
         filename = "[No Name]"
-        file_icon = " "
+        file_icon = " ?"
     end
 
     return prefix .. file_icon .. " " .. U.current_buffer_parent() .. filename .. mod_icon

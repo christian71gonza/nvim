@@ -30,7 +30,7 @@ vim.opt.winbar = nil
 
 vim.opt.inccommand = "nosplit"
 
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 vim.g.VM_set_statusline = 1
 vim.g.VM_silent_exit = 1
 
