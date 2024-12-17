@@ -6,6 +6,7 @@ return {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope-file-browser.nvim',
     'jonarrien/telescope-cmdline.nvim',
+    'nvim-tree/nvim-web-devicons',
     { -- If encountering errors, see telescope-fzf-native README for installation instructions
       'nvim-telescope/telescope-fzf-native.nvim',
 

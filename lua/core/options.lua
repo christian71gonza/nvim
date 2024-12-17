@@ -26,11 +26,12 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.showtabline = 0
+vim.opt.winbar = nil
 
 vim.opt.inccommand = "nosplit"
 
 vim.opt.cmdheight = 0
-vim.g.VM_set_statusline = 0
+vim.g.VM_set_statusline = 1
 vim.g.VM_silent_exit = 1
 
 -- Numbers

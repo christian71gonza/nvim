@@ -1,4 +1,5 @@
 require 'core.utils.theme' -- Custom colorscheme
+require 'core.winbar' -- Custom colorscheme
 require 'core.options' -- Load general options
 require 'core.keymaps' -- Load general keymaps
 require 'core.snippets' -- Custom code snippets
