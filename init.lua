@@ -16,7 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
---    require 'plugins.colortheme',
+    require 'plugins.colortheme',
     require 'plugins.lualine',
     require 'plugins.noice',
     require 'plugins.nvim-cmp',

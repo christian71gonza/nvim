@@ -13,11 +13,6 @@ return {
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.setup()`
       defaults = {
-        borderchars = {
-        prompt = {"─", "│", "─", "│", '┌', '┐', "┘", "└"},
-        results = {"─", "│", "─", "│", "┌", "┐", "┘", "└"},
-        preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
-      },
         layout_config = {
             height = 0.6,
             width = 0.6,

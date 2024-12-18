@@ -52,7 +52,7 @@ return {
     local default_z = {
         {
             "location",
-            icon = { "", align = "left" },
+            icon = { "", align = "left" },
             fmt = function(str)
                 local fixed_width = 7
                 return string.format("%" .. fixed_width .. "s", str)
@@ -60,7 +60,7 @@ return {
         },
         {
             "progress",
-            icon = { "", align = "left" },
+            icon = { "", align = "left" },
             separator = { right = "", left = "" },
         },
     }
@@ -106,12 +106,11 @@ return {
                 {
                     function() return "Telescope" end,
                     color = text_hl,
-                    icon = { "  ", color = icon_hl },
                 },
             },
             lualine_x = {},
             lualine_y = {},
-            lualine_z = default_z,
+            lualine_z = {},
         },
         filetypes = { "TelescopePrompt" },
     }
@@ -163,7 +162,7 @@ return {
         },
         lualine_x = {},
         lualine_y = {},
-        lualine_z = default_z,
+        lualine_z = {},
     },
         options = {
             disabled_filetypes = { "dashboard" },

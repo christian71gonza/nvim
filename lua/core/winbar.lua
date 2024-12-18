@@ -58,7 +58,7 @@ function M.get_winbar()
     local filename = U.current_buffer_filename()
     if filename == "" then
         filename = "[No Name]"
-        file_icon = " ?"
+        file_icon = ""
     end
 
     return prefix .. file_icon .. " " .. U.current_buffer_parent() .. filename .. mod_icon

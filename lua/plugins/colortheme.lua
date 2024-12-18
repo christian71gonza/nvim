@@ -1,30 +1,37 @@
 return {
-    "decaycs/decay.nvim",
-    name = "decay",
+    'AlexvZyl/nordic.nvim',
     lazy = false,
     priority = 1000,
     config = function ()
-        vim.cmd.colorscheme "decay-dark"
-        local decay = require("decay")
+        vim.cmd.colorscheme "nordic"
+        local nordic = require("nordic")
 
         local opt = vim.opt
         local cmd = vim.cmd
 
-        decay.setup({
-          style = "dark",
-
+        nordic.setup({
+            on_highlight = function(highlights, palette)
+                highlights.TelescopePromptBorder = {
+                    fg = palette.cyan.bright,
+                }
+            end,
           -- enables italics in code keywords & comments.
-          italics = {
-            code = true,
-            comments = true,
+          italic_comments = true,
+          transparent = {
+            -- Enable transparent background.
+            bg = true,
+            float = true,
           },
-
-          -- enables contrast when using nvim tree.
-          nvim_tree = {
-            contrast = true
-          },
+            noice = {
+                -- Available styles: `classic`, `flat`.
+                style = 'classic',
+            },
+            telescope = {
+                -- Available styles: `classic`, `flat`.
+                style = 'classic',
+            },
         })
 
-        cmd.colorscheme "decay"
+        cmd.colorscheme "nordic"
     end
 }

@@ -5,7 +5,7 @@ local U = require("core.utils.neovim")
 vim.g.mapleader = " "
 
 vim.o.shortmess = 'IcsCFSW'
-vim.cmd('hi NonText guifg=bg')
+vim.opt.fillchars = { eob = " " }
 vim.opt.showmode = false
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.swapfile = false
@@ -30,7 +30,7 @@ vim.opt.winbar = nil
 
 vim.opt.inccommand = "nosplit"
 
-vim.opt.cmdheight = 1
+vim.opt.cmdheight = 0
 vim.g.VM_set_statusline = 1
 vim.g.VM_silent_exit = 1
 

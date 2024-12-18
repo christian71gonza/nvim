@@ -2,7 +2,7 @@ local M = {}
 
 local U = require("core.utils.neovim")
 
-local transparent = false
+local transparent = true
 
 local function get_bg(color) return transparent and "NONE" or color end
 
@@ -44,8 +44,6 @@ function M.init()
 
         -- Native UI.
         Visual = { bg = M.palette.gray1 },
-        WinBar = { fg = M.palette.white2, bg = get_bg(M.palette.bg) },
-        WinBarNC = { fg = M.palette.white2, bg = get_bg(M.palette.bg) },
         Pmenu = { link = "Normal" },
         WinSeparator = { fg = M.palette.bg_dark, bg = get_bg(M.palette.bg) },
         NormalFloat = { fg = M.palette.fg, bg = get_bg(M.palette.bg) },
